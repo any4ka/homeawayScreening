@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -53,7 +54,7 @@ public class WebAppTest {
 
     // @FindBy(how = How.ID, using = "fancy_notification_content")
     WebElement confirmationOverlay() {
-        return driver.findElement(By.xpath("//div[@id='fancy_notification_content']"));
+        return driver.findElement(By.id("fancy_notification_content"));
     }
 
     // @FindBy(how = How.XPATH, using = "//*[@id=\"fancy_notification_content\"]/span")
@@ -70,6 +71,10 @@ public class WebAppTest {
         return driver.findElement(By.xpath("//span[contains(.,'Continue')]"));
     }
 
+    WebElement countryDropdown() {
+        return driver.findElement(By.id("current_country"));
+    }
+
     public void waitForElement(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
@@ -77,7 +82,7 @@ public class WebAppTest {
     @BeforeClass(alwaysRun = true)
     public void setUpDriver() {
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 100);
+        wait = new WebDriverWait(driver, 10000);
     }
 
     @Test
@@ -95,12 +100,17 @@ public class WebAppTest {
 
         addToCartButton().click();
         waitForElement(confirmationOverlay());
-        Assert.assertTrue(productConfirmation().getText().contains("Apple iPhone 4S 16GB SIM-Free – Black"));
+        //Explicit Wait
+        Thread.sleep(10000);
+        waitForElement(goToCheckoutButton());
         goToCheckoutButton().click();
 
         waitForElement(continueButton());
         continueButton().click();
 
+        waitForElement(countryDropdown());
+        Select select = new Select(countryDropdown());
+        select.selectByVisibleText("USA");
     }
 
     @AfterClass(alwaysRun = true)
