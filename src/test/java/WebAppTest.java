@@ -77,20 +77,32 @@ public class WebAppTest {
         return select;
     }
 
-    WebElement calculateButton(){
+    WebElement calculateButton() {
         return driver.findElement(By.name("wpsc_submit_zipcode"));
     }
 
-    List<WebElement> priceList(){
+    List<WebElement> priceList() {
         return driver.findElements(By.xpath("//span[@class='pricedisplay checkout-shipping']/span[@class='pricedisplay']"));
     }
 
-    WebElement phonePrice(){
+    WebElement phonePrice() {
         return driver.findElement(By.xpath("//span[@class='currentprice pricedisplay product_price_96']"));
     }
 
-    WebElement totalPrice(){
+    WebElement buyNowButton() {
+        return driver.findElement(By.className("buynow"));
+    }
+
+    WebElement removeButton() {
+        return driver.findElement(By.xpath("//input[@value='Remove']"));
+    }
+
+    WebElement totalPrice() {
         return driver.findElement(By.xpath("//span[@id='checkout_total']/span[@class='pricedisplay']"));
+    }
+
+    WebElement emptyCartMessage(){
+        return driver.findElement(By.xpath("//div[@class='entry-content']"));
     }
     //Implicit wait definition
     public void waitForElement(WebElement element) {
@@ -115,7 +127,7 @@ public class WebAppTest {
 
         waitForElement(productTitle());
         Assert.assertTrue(productTitle().getText().contains("Apple iPhone 4S 16GB SIM-Free – Black"));
-        float phonePrice= Float.parseFloat(phonePrice().getText().replace("$", "").trim());
+        float phonePrice = Float.parseFloat(phonePrice().getText().replace("$", "").trim());
         addToCartButton().click();
         waitForElement(confirmationOverlay());
 
@@ -130,7 +142,7 @@ public class WebAppTest {
         waitForElement(calculateButton());
         countryDropDown().selectByVisibleText("USA");
         calculateButton().click();
-        float shippingPrice= Float.parseFloat(priceList().get(0).getText().replace("$", "").trim());
+        float shippingPrice = Float.parseFloat(priceList().get(0).getText().replace("$", "").trim());
         Assert.assertEquals(Float.parseFloat(priceList().get(1).getText().replace("$", "").trim()), phonePrice);
 
         float totalPrice = phonePrice + shippingPrice;
@@ -139,8 +151,25 @@ public class WebAppTest {
     }
 
     @Test
-    public void emptyCartVerification(){
-        
+    public void emptyCartVerification() throws InterruptedException {
+        driver.get("http://store.demoqa.com/");
+        waitForElement(searchBox());
+
+        buyNowButton().click();
+        waitForElement(productTitle());
+        addToCartButton().click();
+        waitForElement(confirmationOverlay());
+
+        //Explicit Wait
+        Thread.sleep(10000);
+        waitForElement(goToCheckoutButton());
+        goToCheckoutButton().click();
+
+        waitForElement(continueButton());
+        removeButton().click();
+
+        waitForElement(emptyCartMessage());
+        Assert.assertEquals("Oops, there is nothing in your cart.".trim(), emptyCartMessage().getText().trim());
     }
 
     @AfterClass(alwaysRun = true)
