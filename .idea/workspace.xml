@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c0c402f-e137-453c-9902-0642fce959b7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/WebAppTest.java" afterPath="$PROJECT_DIR$/src/test/java/WebAppTest.java" />
     </list>
     <ignored path="homeawayScreening.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,40 +38,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebAppTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WebAppTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/WebAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="100" column="7" selection-start-line="100" selection-start-column="7" selection-end-line="100" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.8142077">
+              <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#911#912#0" expanded="true" />
-                <element signature="e#996#997#0" expanded="true" />
-                <element signature="e#1070#1071#0" expanded="true" />
-                <element signature="e#1149#1150#0" expanded="true" />
-                <element signature="e#1406#1407#0" expanded="true" />
-                <element signature="e#1485#1486#0" expanded="true" />
-                <element signature="e#1639#1640#0" expanded="true" />
-                <element signature="e#1723#1724#0" expanded="true" />
-                <element signature="e#1830#1831#0" expanded="true" />
-                <element signature="e#1924#1925#0" expanded="true" />
-                <element signature="e#2325#2326#0" expanded="true" />
-                <element signature="e#2408#2409#0" expanded="true" />
-                <element signature="e#2443#2444#0" expanded="true" />
-                <element signature="e#2528#2529#0" expanded="true" />
-                <element signature="e#2582#2583#0" expanded="true" />
-                <element signature="e#2650#2651#0" expanded="true" />
+                <element signature="e#1475#1476#0" expanded="true" />
+                <element signature="e#1543#1544#0" expanded="true" />
+                <element signature="e#2738#2739#0" expanded="true" />
+                <element signature="e#2811#2812#0" expanded="true" />
+                <element signature="e#3346#3347#0" expanded="true" />
+                <element signature="e#3414#3415#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor vertical-scroll-proportion="0.6559486">
-                <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <first_editor vertical-scroll-proportion="-0.093247585">
+                <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -90,6 +82,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Anna Kruglyanskaya" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -97,8 +94,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/WebAPITest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/WebAppTest.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/WebAppTest.java" />
       </list>
     </option>
   </component>
@@ -150,7 +147,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -208,7 +205,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -635,44 +632,53 @@
       <updated>1455061845049</updated>
       <workItem from="1455061847380" duration="385000" />
       <workItem from="1455062258392" duration="10805000" />
-      <workItem from="1455076807639" duration="3091000" />
+      <workItem from="1455076807639" duration="5930000" />
+      <workItem from="1455137222478" duration="1172000" />
+      <workItem from="1455230830841" duration="6693000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1455081959945</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1455081959945</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WebAppTest - 2016.02.09 at 22h 02m 48s.xml">
+    <history-entry file="WebAppTest - 2016.02.11 at 18h 06m 31s.xml">
       <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest - 2016.02.09 at 22h 11m 07s.xml">
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 00m 25s.xml">
       <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest - 2016.02.09 at 22h 13m 54s.xml">
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 05m 59s.xml">
       <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest - 2016.02.09 at 22h 17m 35s.xml">
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 30m 49s.xml">
       <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest - 2016.02.09 at 22h 19m 22s.xml">
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 33m 20s.xml">
       <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest - 2016.02.09 at 22h 30m 35s.xml">
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 40m 52s.xml">
       <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest_addProductToCart - 2016.02.09 at 21h 36m 45s.xml">
-      <configuration name="WebAppTest.addProductToCart" configurationId="TestNG" />
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 42m 50s.xml">
+      <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest_addProductToCart - 2016.02.09 at 21h 38m 04s.xml">
-      <configuration name="WebAppTest.addProductToCart" configurationId="TestNG" />
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 43m 58s.xml">
+      <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest_addProductToCart - 2016.02.09 at 21h 51m 18s.xml">
-      <configuration name="WebAppTest.addProductToCart" configurationId="TestNG" />
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 50m 11s.xml">
+      <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebAppTest_addProductToCart - 2016.02.09 at 21h 52m 12s.xml">
-      <configuration name="WebAppTest.addProductToCart" configurationId="TestNG" />
+    <history-entry file="WebAppTest - 2016.02.12 at 15h 54m 35s.xml">
+      <configuration name="WebAppTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14281000" />
+    <option name="totallyTimeSpent" value="24985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
@@ -693,7 +699,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39863715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -714,8 +720,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -733,22 +745,88 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-            <element signature="e#1723#1724#0" expanded="true" />
-            <element signature="e#1830#1831#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-            <element signature="e#2528#2529#0" expanded="true" />
-            <element signature="e#2582#2583#0" expanded="true" />
-            <element signature="e#2650#2651#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+            <element signature="e#2738#2739#0" expanded="true" />
+            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#3346#3347#0" expanded="true" />
+            <element signature="e#3414#3415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.0">
+            <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="187" column="17" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/WebAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+            <element signature="e#2738#2739#0" expanded="true" />
+            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#3346#3347#0" expanded="true" />
+            <element signature="e#3414#3415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.0">
+            <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="187" column="17" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/WebAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+            <element signature="e#2738#2739#0" expanded="true" />
+            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#3346#3347#0" expanded="true" />
+            <element signature="e#3414#3415#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,37 +882,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/WebAppTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.48.2/selenium-remote-driver-2.48.2.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="7" selection-start-line="100" selection-start-column="7" selection-end-line="100" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#1639#1640#0" expanded="true" />
-            <element signature="e#1723#1724#0" expanded="true" />
-            <element signature="e#1830#1831#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-            <element signature="e#2528#2529#0" expanded="true" />
-            <element signature="e#2582#2583#0" expanded="true" />
-            <element signature="e#2650#2651#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-8.925926">
+          <caret line="336" column="71" selection-start-line="336" selection-start-column="71" selection-end-line="336" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.6559486">
-            <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <first_editor vertical-scroll-proportion="-0.093247585">
+            <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
             <folding />
           </first_editor>
           <second_editor />
@@ -843,10 +909,20 @@
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/WebAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8142077">
+          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+            <element signature="e#2738#2739#0" expanded="true" />
+            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#3346#3347#0" expanded="true" />
+            <element signature="e#3414#3415#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

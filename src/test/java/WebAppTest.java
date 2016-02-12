@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.util.List;
 
 /**
  * Created by Anna Kruglyanskaya on 2/9/2016.
@@ -44,7 +45,7 @@ public class WebAppTest {
     }
 
     WebElement productTitle() {
-        return driver.findElement(By.xpath("//h1[@class='prodtitle']"));
+        return driver.findElement(By.className("prodtitle"));
     }
 
     //@FindBy(how = How.XPATH, using = "//*[@id=\"single_product_page_container\"]/div[1]/div[2]/form/div[2]/div[1]")
@@ -64,17 +65,34 @@ public class WebAppTest {
 
     //@FindBy(how = How.XPATH, using = "//*[@id=\"fancy_notification_content\"]/a[1]")
     WebElement goToCheckoutButton() {
-        return driver.findElement(By.xpath("//a[@class='go_to_checkout']"));
+        return driver.findElement(By.className("go_to_checkout"));
     }
 
     WebElement continueButton() {
         return driver.findElement(By.xpath("//span[contains(.,'Continue')]"));
     }
 
-    WebElement countryDropdown() {
-        return driver.findElement(By.id("current_country"));
+    Select countryDropDown() {
+        Select select = new Select(driver.findElement(By.id("current_country")));
+        return select;
     }
 
+    WebElement calculateButton(){
+        return driver.findElement(By.name("wpsc_submit_zipcode"));
+    }
+
+    List<WebElement> priceList(){
+        return driver.findElements(By.xpath("//span[@class='pricedisplay checkout-shipping']/span[@class='pricedisplay']"));
+    }
+
+    WebElement phonePrice(){
+        return driver.findElement(By.xpath("//span[@class='currentprice pricedisplay product_price_96']"));
+    }
+
+    WebElement totalPrice(){
+        return driver.findElement(By.xpath("//span[@id='checkout_total']/span[@class='pricedisplay']"));
+    }
+    //Implicit wait definition
     public void waitForElement(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
@@ -86,7 +104,7 @@ public class WebAppTest {
     }
 
     @Test
-    public void addProductToCart() throws InterruptedException {
+    public void priceVerificationScenario() throws InterruptedException {
         driver.get("http://store.demoqa.com/");
         waitForElement(searchBox());
         searchBox().sendKeys("Apple 4s" + Keys.ENTER);
@@ -97,9 +115,10 @@ public class WebAppTest {
 
         waitForElement(productTitle());
         Assert.assertTrue(productTitle().getText().contains("Apple iPhone 4S 16GB SIM-Free – Black"));
-
+        float phonePrice= Float.parseFloat(phonePrice().getText().replace("$", "").trim());
         addToCartButton().click();
         waitForElement(confirmationOverlay());
+
         //Explicit Wait
         Thread.sleep(10000);
         waitForElement(goToCheckoutButton());
@@ -108,9 +127,20 @@ public class WebAppTest {
         waitForElement(continueButton());
         continueButton().click();
 
-        waitForElement(countryDropdown());
-        Select select = new Select(countryDropdown());
-        select.selectByVisibleText("USA");
+        waitForElement(calculateButton());
+        countryDropDown().selectByVisibleText("USA");
+        calculateButton().click();
+        float shippingPrice= Float.parseFloat(priceList().get(0).getText().replace("$", "").trim());
+        Assert.assertEquals(Float.parseFloat(priceList().get(1).getText().replace("$", "").trim()), phonePrice);
+
+        float totalPrice = phonePrice + shippingPrice;
+        Assert.assertEquals(Float.parseFloat(totalPrice().getText().replace("$", "").trim()), totalPrice);
+
+    }
+
+    @Test
+    public void emptyCartVerification(){
+        
     }
 
     @AfterClass(alwaysRun = true)
