@@ -14,7 +14,7 @@ import java.util.Map;
 public class WebAPITest {
     final String API_KEY = "ofBGe2aCXm2YMjwS5BoPSmBmZXuj8Pen0zTaaSzV";
     String response;
-    int stationCode;
+    Integer stationCode;
 
     static {
         RestAssured.baseURI = "https://developer.nrel.gov/api/alt-fuel-stations/";
@@ -27,7 +27,6 @@ public class WebAPITest {
         List<String> stationNames = jsonPath.get("station_name");
         List<Integer> stationId = jsonPath.get("id");
         Map<String, Integer> station = new HashMap<String, Integer>();
-
         for (int i = 0; i < stationNames.size(); i++) {
             station.put(stationNames.get(i), stationId.get(i));
         }
@@ -35,10 +34,15 @@ public class WebAPITest {
         stationCode = station.get("HYATT AUSTIN");
     }
 
-    @Test
+    @Test(dependsOnMethods = "getStationNameAndId")
     public void getAddress() {
-        response = RestAssured.get("v1.json?api_key=" + API_KEY + "&id="+stationCode).then().contentType(ContentType.JSON).extract().response().asString();
-        System.out.println(response);
+        response = RestAssured.get("v1/" + Integer.toString(stationCode) + ".json?api_key=" + API_KEY).then().contentType(ContentType.JSON).extract().response().asString();
+        JsonPath jsonPath = new JsonPath(response).setRoot("alt_fuel_station");
+        Assert.assertEquals("208 Barton Springs Rd".trim(), jsonPath.getString("street_address").trim());
+        Assert.assertEquals("78704".trim(), jsonPath.getString("zip").trim());
+        Assert.assertEquals("TX".trim(), jsonPath.getString("state").trim());
+        Assert.assertEquals("Austin".trim(), jsonPath.getString("city").trim());
+
     }
 
 }
