@@ -4,8 +4,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +13,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.util.List;
 
 /**
@@ -26,12 +24,6 @@ public class WebAppTest {
 
     static {
         System.setProperty("webdriver.chrome.driver", "C:\\dev\\chromedriver.exe");
-    }
-
-    //Define Objects
-    //@FindBy(how = How.XPATH, using = "//a[contains(.,'All Product')]")
-    WebElement allProductLink() {
-        return driver.findElement(By.xpath("//a[contains(.,'All Product')]"));
     }
 
     // @FindBy(how = How.NAME, using = "s")
@@ -58,11 +50,6 @@ public class WebAppTest {
         return driver.findElement(By.id("fancy_notification_content"));
     }
 
-    // @FindBy(how = How.XPATH, using = "//*[@id=\"fancy_notification_content\"]/span")
-    WebElement productConfirmation() {
-        return driver.findElement(By.xpath("//span[contains(.,'You just added \"Apple iPhone 4S 16GB SIM-Free - Black\" to your cart.')]"));
-    }
-
     //@FindBy(how = How.XPATH, using = "//*[@id=\"fancy_notification_content\"]/a[1]")
     WebElement goToCheckoutButton() {
         return driver.findElement(By.className("go_to_checkout"));
@@ -73,8 +60,8 @@ public class WebAppTest {
     }
 
     Select countryDropDown() {
-        Select select = new Select(driver.findElement(By.id("current_country")));
-        return select;
+        Select selectCountry = new Select(driver.findElement(By.id("current_country")));
+        return selectCountry;
     }
 
     WebElement calculateButton() {
